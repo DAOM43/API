@@ -4,7 +4,7 @@ export interface Indicio {
   codigo: string;
   descripcion: string;
   peso: number;
-  color?: string | null;
-  tamano?: string | null;
+  color?: string;
+  tamano?: string;
   activo: boolean;
 }

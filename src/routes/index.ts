@@ -1,10 +1,11 @@
-import { Router } from 'express';
-import auth from './auth.routes';
-import expedientes from './expediente.routes';
-import indicios from './indicio.routes';
+// src/routes/index.ts
+import { Router } from "express";
+import authRoutes from "./auth.routes";
+import expedienteRoutes from "./expediente.routes";
+import indicioRoutes from "./indicio.routes";
 
-const r = Router();
-r.use('/auth', auth);
-r.use('/expedientes', expedientes);
-r.use('/', indicios); // mantiene paths /expedientes/:id/indicios y /indicios/:id
-export default r;
+const router = Router();
+router.use("/auth", authRoutes);
+router.use("/", expedienteRoutes);
+router.use("/", indicioRoutes);
+export default router;
